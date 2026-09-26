@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trusted Companion Care for Your Elderly Parents — Garia, Kolkata</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="/">Companion Care</a>
+  <nav>
+    <a href="/caregiver-apply.html">Become a Companion</a>
+    <a href="/admin/login.html">Admin</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Reliable, background-checked visits for your elderly parents — even when you can't be there.</h1>
+    <p class="lead">
+      Every companion is personally interviewed, reference-checked, and given a supervised
+      trial visit before ever being introduced to your family. We serve Garia, Kamdahari,
+      and the Baishnabghata-Patuli Township area.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/family-signup.html">Find Care for a Family Member</a>
+      <a class="btn btn-secondary" href="/caregiver-apply.html">Apply to Become a Companion</a>
+    </div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Safety check-in visits</h3>
+      <p>Scheduled visits so someone always knows your parent is okay — daily, a few times a week, or weekly.</p>
+    </div>
+    <div class="card">
+      <h3>Companionship</h3>
+      <p>A friendly, familiar face for conversation, a walk, or just company through the day.</p>
+    </div>
+    <div class="card">
+      <h3>Errands & reminders</h3>
+      <p>Medicine pickup, bill payment, and gentle reminders to take medication on schedule.</p>
+    </div>
+    <div class="card">
+      <h3>Every companion is verified</h3>
+      <p>ID checked, two references called, and a trial visit personally supervised before any match is made.</p>
+    </div>
+  </div>
+
+  <p style="text-align:center; color:#666; font-size:0.9rem;">
+    This is a non-medical companionship and support service, not a nursing or medical
+    care service. For medical needs, please consult a qualified healthcare provider.
+  </p>
+</main>
+
+<footer>&copy; 2026 Companion Care · Garia, Kolkata</footer>
+
+</body>
+</html>
