@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Request Care — Companion Care</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="/">Companion Care</a>
+  <nav><a href="/">Home</a></nav>
+</header>
+
+<main>
+  <h1 style="color:#1f3864;">Tell us about your family member</h1>
+  <p style="color:#666;">
+    We'll call you within a day to understand your needs and answer any questions —
+    this form doesn't commit you to anything.
+  </p>
+
+  <div id="notice"></div>
+
+  <form id="family-form">
+    <div class="form-row">
+      <div class="field">
+        <label for="contact_name">Your name *</label>
+        <input type="text" id="contact_name" name="contact_name" required />
+      </div>
+      <div class="field">
+        <label for="contact_relationship">Your relationship to them</label>
+        <select id="contact_relationship" name="contact_relationship">
+          <option value="">Select…</option>
+          <option>Son</option>
+          <option>Daughter</option>
+          <option>Spouse</option>
+          <option>Self (I am the elderly person)</option>
+          <option>Other relative</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="contact_phone">Your phone number *</label>
+      <input type="tel" id="contact_phone" name="contact_phone" placeholder="10-digit mobile number" required />
+    </div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="elderly_name">Elderly family member's name *</label>
+        <input type="text" id="elderly_name" name="elderly_name" required />
+      </div>
+      <div class="field">
+        <label for="elderly_age">Their age</label>
+        <input type="number" id="elderly_age" name="elderly_age" min="1" max="120" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="area">Area / neighbourhood *</label>
+      <input type="text" id="area" name="area" placeholder="e.g. Baishnabghata-Patuli Township" required />
+      <div class="hint">We currently serve Garia, Kamdahari, and nearby areas of South Kolkata.</div>
+    </div>
+
+    <div class="field">
+      <label for="address">Full address (kept private, used only to plan visits)</label>
+      <textarea id="address" name="address"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="needs">What kind of help are you looking for?</label>
+      <textarea id="needs" name="needs" placeholder="e.g. daily safety check-ins, help with medicine reminders, company during the day..."></textarea>
+    </div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="frequency">How often?</label>
+        <select id="frequency" name="frequency">
+          <option value="">Select…</option>
+          <option>Daily</option>
+          <option>A few times a week</option>
+          <option>Weekly</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="budget_monthly">Comfortable monthly budget (₹, optional)</label>
+        <input type="number" id="budget_monthly" name="budget_monthly" min="0" />
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="width:100%;">Submit Request</button>
+  </form>
+</main>
+
+<footer>&copy; 2026 Companion Care · Garia, Kolkata</footer>
+
+<script src="/js/main.js"></script>
+<script>
+  attachFormHandler("family-form", "/api/families", {
+    successMessage: "Thank you — we've received your request and will call you within a day.",
+  });
+</script>
+</body>
+</html>
