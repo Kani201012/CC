@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Apply to Become a Companion — Companion Care</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="/">Companion Care</a>
+  <nav><a href="/">Home</a></nav>
+</header>
+
+<main>
+  <h1 style="color:#1f3864;">Apply to become a companion</h1>
+  <p style="color:#666;">
+    After you apply, we'll call you to arrange an in-person interview and a short
+    trial visit before any placement — this protects both you and the families we serve.
+  </p>
+
+  <div id="notice"></div>
+
+  <form id="caregiver-form">
+    <div class="form-row">
+      <div class="field">
+        <label for="full_name">Full name *</label>
+        <input type="text" id="full_name" name="full_name" required />
+      </div>
+      <div class="field">
+        <label for="age">Your age</label>
+        <input type="number" id="age" name="age" min="18" max="80" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="phone">Phone number *</label>
+      <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" required />
+    </div>
+
+    <div class="field">
+      <label for="area">Area you can serve *</label>
+      <input type="text" id="area" name="area" placeholder="e.g. Garia, Kamdahari" required />
+    </div>
+
+    <div class="field">
+      <label for="experience">Relevant experience</label>
+      <textarea id="experience" name="experience" placeholder="e.g. cared for my own grandmother for 3 years, previously worked as a home attendant..."></textarea>
+    </div>
+
+    <div class="field">
+      <label for="availability">When are you available?</label>
+      <input type="text" id="availability" name="availability" placeholder="e.g. weekday mornings, evenings, weekends" />
+    </div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="id_proof_type">ID proof type</label>
+        <select id="id_proof_type" name="id_proof_type">
+          <option value="">Select…</option>
+          <option>Aadhaar</option>
+          <option>Voter ID</option>
+          <option>Driving Licence</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="id_proof_number">ID number</label>
+        <input type="text" id="id_proof_number" name="id_proof_number" />
+        <div class="hint">Shown only to the admin during verification — never displayed publicly.</div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="reference_1_name">Reference 1 — name</label>
+        <input type="text" id="reference_1_name" name="reference_1_name" />
+      </div>
+      <div class="field">
+        <label for="reference_1_phone">Reference 1 — phone</label>
+        <input type="tel" id="reference_1_phone" name="reference_1_phone" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="reference_2_name">Reference 2 — name</label>
+        <input type="text" id="reference_2_name" name="reference_2_name" />
+      </div>
+      <div class="field">
+        <label for="reference_2_phone">Reference 2 — phone</label>
+        <input type="tel" id="reference_2_phone" name="reference_2_phone" />
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="width:100%;">Submit Application</button>
+  </form>
+</main>
+
+<footer>&copy; 2026 Companion Care · Garia, Kolkata</footer>
+
+<script src="/js/main.js"></script>
+<script>
+  attachFormHandler("caregiver-form", "/api/caregivers", {
+    successMessage: "Thank you — we've received your application. We'll call you soon to arrange an interview.",
+  });
+</script>
+</body>
+</html>
